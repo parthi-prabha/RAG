@@ -23,6 +23,3 @@ COLLECTION_NAME = "lang-chain"
 
 # Embedding model configuration
 EMBEDDING_MODEL = "sentence-transformers/all-MiniLM-L6-v2"
-
-
-
