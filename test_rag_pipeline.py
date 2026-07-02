@@ -4,13 +4,12 @@ rag = RAGPipeline()
 
 result = rag.ask("What is Python?")
 
-print("\nAnswer:\n")
+print("\nAnswer")
+print("-" * 50)
 print(result["answer"])
 
-print("\nRetrieved Documents:\n")
+print("\nSources")
+print("-" * 50)
 
-for i, doc in enumerate(result["documents"], start=1):
-    print(f"Document {i}")
-    print("-" * 50)
-    print(doc.page_content[:300])
-    print()
+for source in result["sources"]:
+    print(source)

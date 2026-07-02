@@ -1,7 +1,7 @@
 from src.llm import get_llm
 from src.retriever import get_retriever
 from src.prompt import get_prompt
-from src.utils import format_context
+from src.utils import format_context, get_sources
 class RAGPipeline:
 
     """
@@ -33,7 +33,8 @@ class RAGPipeline:
 
         return {
             'answer' : response.content,
-            'documents' : docs
+            'documents' : docs,
+            'sources' : get_sources(docs)
         }
 
 
