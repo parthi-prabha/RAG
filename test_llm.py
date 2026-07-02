@@ -2,6 +2,7 @@ from src.llm import get_llm
 
 llm = get_llm()
 
-response = llm.invoke("What is ai?")
+query = input("Enter your query: ")
+response = llm.invoke(query)
 
 print(response.content)
